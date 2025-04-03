@@ -26,7 +26,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed; /*change to relative if glitch */
 }
 .wrapper 
 {
@@ -45,7 +45,7 @@ body
 #shield 
 {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 41%;
     width: 80px;
     height: 80px;

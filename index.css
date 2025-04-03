@@ -6,6 +6,12 @@ html
 	font-family: Montserrat;
 	text-align: center;
 }
+body
+{
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+}
 
 /* Logo */
 #svgs

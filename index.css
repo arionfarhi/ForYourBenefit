@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* First Page */
+html
+{
+	font-family: Montserrat;
+	text-align: center;
+}
+
+/* Logo */
+#svgs
+{
+	transition: opacity 1s ease-in-out, max-height 1s ease-in-out, margin 1s ease-in-out, padding 1s ease-in-out;
+}
+#shield 
+{
+    position: absolute;
+    top: 15%;
+    left: 41%;
+    width: 80px;
+    height: 80px;
+    opacity: .75;
+}
+#circles
+{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	transform-origin: center;
+	pointer-events: none;
+}
+.circle1
+{
+	animation: moveLeftRight 3.5s ease-in-out infinite;
+}
+@keyframes moveLeftRight 
+{
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-7.5px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+.circle2
+{
+	animation: moveNorthwest 3s ease-in-out infinite;
+}
+@keyframes moveNorthwest 
+{
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(3px, 3px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+.circle3
+{
+	animation: moveSouthEast 4s ease-in-out infinite;
+}
+@keyframes moveSouthEast
+{
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(3px, -3px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+
+/* Heading */
+#title
+{
+	transition: margin-top 1s ease-in-out;
+}
+#heading h1
+{
+	margin-top: 260px;
+	margin-bottom: 10px;
+	font-size: 30px;
+}
+#heading h2
+{
+	font-size: 11.5px;
+	font-weight: normal;
+	margin-top: 0px;
+	color: grey;
+}
+
+
+/* Scan + Form */
+#scan
+{
+	margin-top: 30px;
+	margin-bottom: 0px;
+	width: 50%;
+	height: 47.5px;
+	background-color: #1977F2;
+	border: none;
+	border-radius: 999px;
+	font-family: Montserrat;
+	color: white;
+	font-weight: 600;
+	font-size: 15px;
+	opacity: .75;
+	transition: opacity 1s ease-in-out;
+}
+#main-form
+{
+	min-height: 300px;
+}
+#form-sans-submit
+{
+	transition: opacity 1s ease-in-out, max-height 1s ease-in-out, margin 1s ease-in-out, padding 1s ease-in-out;
+	overflow: hidden;
+	max-height: 600px;
+}
+input, label, button
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+}
+input
+{
+	width: 90%;
+	height: 55px;
+	border: none;
+	border-radius: 10px;
+	background-color: #F7F7F7;
+	margin-top: 15px;
+	text-indent: 15px;
+	font-family: "Montserrat";
+	font-size: 14.5px;
+}
+.input-container
+{
+	position: relative;
+}
+input::placeholder
+{
+	font-family: "Montserrat";
+	text-indent: 15px;
+	font-size: 14px;
+	transition: all 0.3s ease;
+}
+input:focus
+{
+	text-indent: 15px;
+	outline: none;
+	background-color: #F1F0F2;
+}
+.input-container i 
+{
+	position: absolute;
+	right: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+	color: grey;
+}
+.error
+{
+	outline: 1px solid red;
+}
+#errorText 
+{
+	color: red;
+	font-size: 13px;
+}
+
+#submit 
+{
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	height: 50px;
+	background-color: #1977F2;
+	border: none;
+	border-radius: 10px;
+	font-family: Montserrat;
+	color: white;
+	font-weight: 600;
+	font-size: 17px;
+	text-align: center;
+	overflow: hidden;
+	z-index: 9999;
+}
+#submit span 
+{
+	display: inline-block;
+	transition: opacity 0.3s ease;
+}
+#submit i 
+{
+	position: absolute;
+	top: 50%;
+	font-size: 19px;
+	transform: translateY(-50%);
+	pointer-events: none;
+	transition: left 0.4s ease, right 0.4s ease, opacity 0.4s ease;
+}
+#submit .fa-arrow-right 
+{
+	right: 15px;
+	opacity: 1;
+}
+#submit .fa-arrow-left 
+{
+	left: 15px;
+	opacity: 0;
+}
+#submit.left-arrow .fa-arrow-right
+{
+	opacity: 0;
+}
+#submit.left-arrow .fa-arrow-left 
+{
+	opacity: 1;
+}
+
+
+/* TRANSITION */
+
+.hidden 
+{
+	opacity: 0;
+	max-height: 0;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	overflow: hidden;
+}
+
+
+/* SECOND PAGE */
+
+/* Tabs */
+#tabs 
+{
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
+	padding: 20px 0;
+	padding-bottom: 7.5px;
+	padding-top: 11px;
+	opacity: 0; 
+	transition: opacity 1s ease-in-out; 
+}
+#tabs::before, #tabs::after 
+{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	height: 4px; 
+}
+#tabs::before /*left side*/
+{
+	left: 0;
+	width: 50%; 
+	background-color: var(--tab1-color, #1977F2); 
+}
+#tabs::after /*right side*/
+{
+	right: 0;
+	width: 50%; 
+	background-color: var(--tab2-color, #00000099); 
+}
+.tab 
+{
+	align-items: center;
+	cursor: pointer;
+	color: #00000099;
+	padding-bottom: 0px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+.tab:focus, .tab:active
+{
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.tab i 
+{
+	font-size: 22px;
+	margin-bottom: 4px;
+	padding-right: 3px;
+}
+.tab span 
+{
+	display: inline-block;
+	margin-top: -3px;
+	font-size: 16px;
+	margin-bottom: 4px;
+	vertical-align: middle;
+}
+
+
+/* Actual Content */
+#second-page-loading
+{
+	position: absolute;
+	opacity: 0;
+	top: 225px;
+	width: 100%;
+	transition: opacity .75s ease-in-out; 
+}
+
+
+#second-page-content /* Ask chatGPT why everyhting is so spaced out! */
+{
+	position: absolute;
+	opacity: 0;
+	top: 167.5px;
+	left: 0%;
+	width: 100%;
+}
+
+
+#inactive-sad
+{
+	font-size: 27.5px;
+	padding-top: 10px;
+	padding-bottom: 7.5px;
+}
+#inactive-line-text
+{
+	margin-top: 15px;
+}
+#inactive-line
+{
+	margin-bottom: 7.5px;
+}
+#inactive-last
+{
+	margin-top: -27.5px;
+}
+
+
+.text
+{
+	text-align: left;
+	font-size: 17px;
+	overflow: auto;
+	margin-bottom: 40px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#first
+{
+	font-size: 18px;
+	margin-bottom: 25px;
+	text-align: center;
+	border: none;
+	line-height: 1.50;
+}
+.confetti 
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	overflow: hidden;
+	z-index: 9999;
+}
+@keyframes fall 
+{
+	0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+	70% { opacity: 1; } /* Stay visible for most of the fall */
+	100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+.confetti-piece 
+{
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background-color: #fff;
+	border-radius: 50%;
+	animation: fall linear forwards; /* No infinite loop */
+	opacity: 0.8;
+}
+@keyframes shine-once 
+{
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+#dance 
+{
+    position: relative;
+}
+#dance.shine::before 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    pointer-events: none;
+    /*animation: shine-once 1.5s ease-in-out forwards;*/
+}
+b
+{
+	font-weight: 550;
+}
+.line-with-text 
+{
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	margin: 0;
+	margin-bottom: 10px;
+}
+.line-text 
+{
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	text-align: left;
+	margin-left: 5%;
+}
+.line 
+{
+	margin-left: 5%;
+	width: 90%;
+	height: 2.5px;
+	background-color: lightgrey;
+	border-radius: 0px;
+}
+.icon2
+{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background: #1977F2;
+	opacity: 0.75;
+	color: white;
+	border-radius: 50%;
+	width: 17.5px;
+	height: 17.5px;
+	text-align: center;
+	font-size: 13px;
+	cursor: pointer;
+	margin-left: 7.5px;
+	position: relative;
+	bottom: 2px;
+	font-family: "Sans-serif";
+	text-align: center;
+}
+#second
+{
+	margin-bottom: 10px;
+	line-height: 1.5;
+}
+#smaller 
+{
+	font-size: 15.5px;
+	line-height: 2;
+}
+.progress-container 
+{
+	width: 80%;
+	margin-left: 5%;
+	text-align: left;
+	margin-bottom: 37.5px;
+	margin-top: 0px;
+}
+.progress-labels 
+{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 6px;
+	font-weight: bold;
+	font-size: 14px;
+	margin-right: 5px;
+	margin-left: 2.5px;
+}
+.spent-label, .remaining-label 
+{
+	color: #555;
+}
+.progress-bar 
+{
+	background-color: #e0e0e0;
+	border-radius: 20px;
+	width: 100%;
+	height: 15px;
+	position: relative;
+	overflow: hidden;
+}
+.progress-fill 
+{
+	height: 100%;
+	background-color: #1977F2;
+	border-radius: 20px 0 0 20px;
+	transition: width 0.5s ease-in-out;
+	background-color: #1977F2;
+	opacity: .75;
+	transition: width 1.5s ease-in-out;
+}
+#third
+{
+	line-height: 1.25;
+	margin-bottom: 10px;
+}
+/* MAKE IT SO WORK IS DIVIDED UP... LINE IS SPACED BENEATH */
+#percentages
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.per-item
+{
+	flex: 1;
+}
+
+
+/* SECOND PAGE TRANSITIONS */
+.loading-hidden 
+{
+	opacity: 0;
+	transition: opacity 1.5s ease-in-out;
+}
+.loading-visible 
+{
+	opacity: 1;
+	transition: opacity 1.5s ease-in-out;
+}
+
+

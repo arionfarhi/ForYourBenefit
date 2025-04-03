@@ -45,7 +45,7 @@ body
 #shield 
 {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 41%;
     width: 80px;
     height: 80px;
@@ -54,7 +54,7 @@ body
 #circles
 {
 	position: absolute;
-	top: 0%;
+	top: -3.5%;
 	left: 0%;
 	transform-origin: center;
 	pointer-events: none;
@@ -116,7 +116,7 @@ body
 }
 #heading h1
 {
-	margin-top: 260px;
+	margin-top: 160px;
 	margin-bottom: 10px;
 	font-size: 30px;
 }
@@ -170,10 +170,11 @@ input
 	border: none;
 	border-radius: 10px;
 	background-color: #F7F7F7;
-	margin-top: 15px;
+	margin-top: 20px;
 	text-indent: 15px;
 	font-family: "Montserrat";
 	font-size: 14.5px;
+	-webkit-tap-highlight-color: transparent;
 }
 .input-container
 {
@@ -190,6 +191,7 @@ input:focus
 {
 	text-indent: 15px;
 	outline: none;
+	box-shadow: none;
 	background-color: #F1F0F2;
 }
 .input-container i 
